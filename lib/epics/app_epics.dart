@@ -5,11 +5,11 @@ import 'package:weather_app/data/location_api.dart';
 import 'package:weather_app/models/index.dart';
 
 class AppEpics {
-  AppEpics({required LocationApi locationApi}) :  _locationApi = locationApi;
+  AppEpics({required LocationApi locationApi}) : _locationApi = locationApi;
 
   final LocationApi _locationApi;
 
-  Epic<AppState>get epics {
+  Epic<AppState> get epics {
     return combineEpics<AppState>(<Epic<AppState>>[
       TypedEpic<AppState, GetLocationStart>(_getLocation),
     ]);

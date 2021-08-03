@@ -15,7 +15,7 @@ class LocationApi {
     if (response.statusCode >= 300) {
       throw StateError(response.body);
     }
-    
+
     return Location.fromJson(jsonDecode(response.body));
   }
 }

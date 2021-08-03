@@ -22,10 +22,7 @@ class _$AppStateSerializer implements StructuredSerializer<AppState> {
     Object? value;
     value = object.location;
     if (value != null) {
-      result
-        ..add('location')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(Location)));
+      result..add('location')..add(serializers.serialize(value, specifiedType: const FullType(Location)));
     }
     return result;
   }
@@ -42,8 +39,7 @@ class _$AppStateSerializer implements StructuredSerializer<AppState> {
       final Object? value = iterator.current;
       switch (key) {
         case 'location':
-          result.location.replace(serializers.deserialize(value,
-              specifiedType: const FullType(Location))! as Location);
+          result.location.replace(serializers.deserialize(value, specifiedType: const FullType(Location))! as Location);
           break;
       }
     }
@@ -63,20 +59,15 @@ class _$LocationSerializer implements StructuredSerializer<Location> {
       {FullType specifiedType = FullType.unspecified}) {
     final result = <Object?>[
       'status',
-      serializers.serialize(object.status,
-          specifiedType: const FullType(String)),
+      serializers.serialize(object.status, specifiedType: const FullType(String)),
       'country',
-      serializers.serialize(object.country,
-          specifiedType: const FullType(String)),
+      serializers.serialize(object.country, specifiedType: const FullType(String)),
       'countryCode',
-      serializers.serialize(object.countryCode,
-          specifiedType: const FullType(String)),
+      serializers.serialize(object.countryCode, specifiedType: const FullType(String)),
       'region',
-      serializers.serialize(object.region,
-          specifiedType: const FullType(String)),
+      serializers.serialize(object.region, specifiedType: const FullType(String)),
       'regionName',
-      serializers.serialize(object.regionName,
-          specifiedType: const FullType(String)),
+      serializers.serialize(object.regionName, specifiedType: const FullType(String)),
       'city',
       serializers.serialize(object.city, specifiedType: const FullType(String)),
       'zip',
@@ -86,8 +77,7 @@ class _$LocationSerializer implements StructuredSerializer<Location> {
       'lon',
       serializers.serialize(object.lon, specifiedType: const FullType(double)),
       'timezone',
-      serializers.serialize(object.timezone,
-          specifiedType: const FullType(String)),
+      serializers.serialize(object.timezone, specifiedType: const FullType(String)),
       'isp',
       serializers.serialize(object.isp, specifiedType: const FullType(String)),
       'org',
@@ -95,8 +85,7 @@ class _$LocationSerializer implements StructuredSerializer<Location> {
       'as',
       serializers.serialize(object.as, specifiedType: const FullType(String)),
       'query',
-      serializers.serialize(object.query,
-          specifiedType: const FullType(String)),
+      serializers.serialize(object.query, specifiedType: const FullType(String)),
     ];
 
     return result;
@@ -114,60 +103,46 @@ class _$LocationSerializer implements StructuredSerializer<Location> {
       final Object? value = iterator.current;
       switch (key) {
         case 'status':
-          result.status = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+          result.status = serializers.deserialize(value, specifiedType: const FullType(String)) as String;
           break;
         case 'country':
-          result.country = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+          result.country = serializers.deserialize(value, specifiedType: const FullType(String)) as String;
           break;
         case 'countryCode':
-          result.countryCode = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+          result.countryCode = serializers.deserialize(value, specifiedType: const FullType(String)) as String;
           break;
         case 'region':
-          result.region = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+          result.region = serializers.deserialize(value, specifiedType: const FullType(String)) as String;
           break;
         case 'regionName':
-          result.regionName = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+          result.regionName = serializers.deserialize(value, specifiedType: const FullType(String)) as String;
           break;
         case 'city':
-          result.city = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+          result.city = serializers.deserialize(value, specifiedType: const FullType(String)) as String;
           break;
         case 'zip':
-          result.zip = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+          result.zip = serializers.deserialize(value, specifiedType: const FullType(String)) as String;
           break;
         case 'lat':
-          result.lat = serializers.deserialize(value,
-              specifiedType: const FullType(double)) as double;
+          result.lat = serializers.deserialize(value, specifiedType: const FullType(double)) as double;
           break;
         case 'lon':
-          result.lon = serializers.deserialize(value,
-              specifiedType: const FullType(double)) as double;
+          result.lon = serializers.deserialize(value, specifiedType: const FullType(double)) as double;
           break;
         case 'timezone':
-          result.timezone = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+          result.timezone = serializers.deserialize(value, specifiedType: const FullType(String)) as String;
           break;
         case 'isp':
-          result.isp = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+          result.isp = serializers.deserialize(value, specifiedType: const FullType(String)) as String;
           break;
         case 'org':
-          result.org = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+          result.org = serializers.deserialize(value, specifiedType: const FullType(String)) as String;
           break;
         case 'as':
-          result.as = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+          result.as = serializers.deserialize(value, specifiedType: const FullType(String)) as String;
           break;
         case 'query':
-          result.query = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+          result.query = serializers.deserialize(value, specifiedType: const FullType(String)) as String;
           break;
       }
     }
@@ -180,14 +155,12 @@ class _$AppState extends AppState {
   @override
   final Location? location;
 
-  factory _$AppState([void Function(AppStateBuilder)? updates]) =>
-      (new AppStateBuilder()..update(updates)).build();
+  factory _$AppState([void Function(AppStateBuilder)? updates]) => (new AppStateBuilder()..update(updates)).build();
 
   _$AppState._({this.location}) : super._();
 
   @override
-  AppState rebuild(void Function(AppStateBuilder) updates) =>
-      (toBuilder()..update(updates)).build();
+  AppState rebuild(void Function(AppStateBuilder) updates) => (toBuilder()..update(updates)).build();
 
   @override
   AppStateBuilder toBuilder() => new AppStateBuilder()..replace(this);
@@ -205,8 +178,7 @@ class _$AppState extends AppState {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('AppState')..add('location', location))
-        .toString();
+    return (newBuiltValueToStringHelper('AppState')..add('location', location)).toString();
   }
 }
 
@@ -250,8 +222,7 @@ class AppStateBuilder implements Builder<AppState, AppStateBuilder> {
         _$failedField = 'location';
         _location?.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            'AppState', _$failedField, e.toString());
+        throw new BuiltValueNestedFieldError('AppState', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -290,8 +261,7 @@ class _$Location extends Location {
   @override
   final String query;
 
-  factory _$Location([void Function(LocationBuilder)? updates]) =>
-      (new LocationBuilder()..update(updates)).build();
+  factory _$Location([void Function(LocationBuilder)? updates]) => (new LocationBuilder()..update(updates)).build();
 
   _$Location._(
       {required this.status,
@@ -311,8 +281,7 @@ class _$Location extends Location {
       : super._() {
     BuiltValueNullFieldError.checkNotNull(status, 'Location', 'status');
     BuiltValueNullFieldError.checkNotNull(country, 'Location', 'country');
-    BuiltValueNullFieldError.checkNotNull(
-        countryCode, 'Location', 'countryCode');
+    BuiltValueNullFieldError.checkNotNull(countryCode, 'Location', 'countryCode');
     BuiltValueNullFieldError.checkNotNull(region, 'Location', 'region');
     BuiltValueNullFieldError.checkNotNull(regionName, 'Location', 'regionName');
     BuiltValueNullFieldError.checkNotNull(city, 'Location', 'city');
@@ -327,8 +296,7 @@ class _$Location extends Location {
   }
 
   @override
-  Location rebuild(void Function(LocationBuilder) updates) =>
-      (toBuilder()..update(updates)).build();
+  Location rebuild(void Function(LocationBuilder) updates) => (toBuilder()..update(updates)).build();
 
   @override
   LocationBuilder toBuilder() => new LocationBuilder()..replace(this);
@@ -366,9 +334,7 @@ class _$Location extends Location {
                                     $jc(
                                         $jc(
                                             $jc(
-                                                $jc(
-                                                    $jc($jc(0, status.hashCode),
-                                                        country.hashCode),
+                                                $jc($jc($jc(0, status.hashCode), country.hashCode),
                                                     countryCode.hashCode),
                                                 region.hashCode),
                                             regionName.hashCode),
@@ -502,28 +468,20 @@ class LocationBuilder implements Builder<Location, LocationBuilder> {
   _$Location build() {
     final _$result = _$v ??
         new _$Location._(
-            status: BuiltValueNullFieldError.checkNotNull(
-                status, 'Location', 'status'),
-            country: BuiltValueNullFieldError.checkNotNull(
-                country, 'Location', 'country'),
-            countryCode: BuiltValueNullFieldError.checkNotNull(
-                countryCode, 'Location', 'countryCode'),
-            region: BuiltValueNullFieldError.checkNotNull(
-                region, 'Location', 'region'),
-            regionName: BuiltValueNullFieldError.checkNotNull(
-                regionName, 'Location', 'regionName'),
-            city:
-                BuiltValueNullFieldError.checkNotNull(city, 'Location', 'city'),
+            status: BuiltValueNullFieldError.checkNotNull(status, 'Location', 'status'),
+            country: BuiltValueNullFieldError.checkNotNull(country, 'Location', 'country'),
+            countryCode: BuiltValueNullFieldError.checkNotNull(countryCode, 'Location', 'countryCode'),
+            region: BuiltValueNullFieldError.checkNotNull(region, 'Location', 'region'),
+            regionName: BuiltValueNullFieldError.checkNotNull(regionName, 'Location', 'regionName'),
+            city: BuiltValueNullFieldError.checkNotNull(city, 'Location', 'city'),
             zip: BuiltValueNullFieldError.checkNotNull(zip, 'Location', 'zip'),
             lat: BuiltValueNullFieldError.checkNotNull(lat, 'Location', 'lat'),
             lon: BuiltValueNullFieldError.checkNotNull(lon, 'Location', 'lon'),
-            timezone: BuiltValueNullFieldError.checkNotNull(
-                timezone, 'Location', 'timezone'),
+            timezone: BuiltValueNullFieldError.checkNotNull(timezone, 'Location', 'timezone'),
             isp: BuiltValueNullFieldError.checkNotNull(isp, 'Location', 'isp'),
             org: BuiltValueNullFieldError.checkNotNull(org, 'Location', 'org'),
             as: BuiltValueNullFieldError.checkNotNull(as, 'Location', 'as'),
-            query: BuiltValueNullFieldError.checkNotNull(
-                query, 'Location', 'query'));
+            query: BuiltValueNullFieldError.checkNotNull(query, 'Location', 'query'));
     replace(_$result);
     return _$result;
   }
